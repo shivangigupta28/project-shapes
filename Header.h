@@ -202,9 +202,10 @@ public:
 	void updateShape();
 	void deleteShape();
 	void display2d_perimeter();
-	//void display2d_area();
+	void display3d_volume();
 	void displayAll();
 };
 #endif // !HEADER_H
 
+                                                                                                                                                                                                                             
                                                                                                                                                                                                                              
