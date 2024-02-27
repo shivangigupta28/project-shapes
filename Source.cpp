@@ -422,7 +422,8 @@ void Menu::printMenu()
 	cout << "3.UPDATE THE SHAPE" << endl;
 	cout << "4.DELETE THE SHAPE" << endl;
 	cout << "5.DISPLAY ALL" << endl;
-	cout << "6.DISPLAY USING PERIMETER" << endl;
+	cout << "6.DISPLAY 2D SHAPES" << endl;
+	cout << "7.DISPLAY 3D SHAPES" << endl;
 	cout << "HOW YOU WANT TO PROCEED" << endl;
 }
 //warehouse
@@ -823,6 +824,13 @@ void Warehouse::display2d_perimeter() {
 	for (int i = 0; i < shapes2d.size(); i++)
 	{
 		shapes2d[i]->display();
+	}
+}
+void Warehouse::display3d_volume() {
+	sort(shapes3d.begin(), shapes3d.end());
+	for (int i = 0; i < shapes3d.size(); i++)
+	{
+		shapes3d[i]->display();
 	}
 }
 
