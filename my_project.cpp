@@ -5,48 +5,47 @@
 #include "Header.h"
 using namespace std;
 
-void start()
+
+int main()
 {
 	Menu m;
 	Warehouse warehouse;
-	
+
 	int choice;
-		
-		do
+
+	do
+	{
+		m.printMenu();
+		cin >> choice;
+		switch (choice)
 		{
-			m.printMenu();
-			cin >> choice;
-			switch (choice)
-			{
-			case 1:
-				warehouse.addShape();
-				break;
-			case 2:
-				warehouse.searchShape();
-				break;
-			case 3:
-				warehouse.updateShape();
-				break;
-			case 4:
-				warehouse.deleteShape();
-				break;
-			case 5:
-				warehouse.displayAll();
-				break;
-			case 6:
-				warehouse.display2d_perimeter();
-				break;
-			default:
-				cout << "Invalid" << endl;
-				break;
-			}
-		} while (choice > 0 && choice < 7);
-		
-	
-}
-int main()
-{
-	start();
+		case 1:
+			warehouse.addShape();
+			break;
+		case 2:
+			warehouse.searchShape();
+			break;
+		case 3:
+			warehouse.updateShape();
+			break;
+		case 4:
+			warehouse.deleteShape();
+			break;
+		case 5:
+			warehouse.displayAll();
+			break;
+		case 6:
+			warehouse.display2d_perimeter();
+			break;
+		case 7:
+			warehouse.display3d_volume();
+			break;
+		default:
+			cout << "Invalid" << endl;
+			break;
+		}
+	} while (choice > 0 && choice < 8);
+
 }
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
